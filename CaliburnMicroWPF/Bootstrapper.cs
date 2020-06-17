@@ -49,7 +49,7 @@ namespace CaliburnMicroWPF
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<LoginViewModel>();
+            DisplayRootViewFor<MainViewModel>();
         }
 
         protected override void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)

@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace SystemManage.ViewModels
 {
-	[Export(typeof(EditUserViewModel))]
+	//[Export(typeof(EditUserViewModel))]
 	public class EditUserViewModel : Screen
     {
 		private IWindowManager m_windowManager;

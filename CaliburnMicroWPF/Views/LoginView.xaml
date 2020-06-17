@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="LoginView" Height="400" Width="600">
     <Grid>
-        <Button Width="150" Height="40" cm:Message.Attach="ClickMe()">点击弹窗</Button>
+        <Button Width="150" Height="40" cm:Message.Attach="ClickMe()">登录</Button>
     </Grid>
 </Window>

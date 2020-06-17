@@ -5,23 +5,24 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using SystemManage.ViewModels;
 
 namespace CaliburnMicroWPF.ViewModels
 {
-    [Export(typeof(LoginViewModel))]
+    //[Export(typeof(LoginViewModel))]
     public class LoginViewModel : Screen
     {
-        private IWindowManager m_windowManager;
-        [ImportingConstructor]      //必须加入这个，这是因为用MEF在创建LoginViewModel实例时，有[ImportingConstructor]标记的构造函数的参数会自动使用容器内相应的export对象
-        public LoginViewModel(IWindowManager windowManager)
+        public bool IsLogin { get; set; } = false;
+        public LoginViewModel()
         {
-            m_windowManager = windowManager;
         }
 
         public void ClickMe()
         {
-            m_windowManager.ShowWindow(new EditUserViewModel(m_windowManager));
+            MessageBox.Show("登录成功", "提示");
+            IsLogin = true;
+            this.TryClose();
         }
     }
 }
