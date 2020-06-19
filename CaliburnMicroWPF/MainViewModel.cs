@@ -21,6 +21,9 @@ namespace CaliburnMicroWPF
             m_windowManager = windowManager;
         }
 
+        /// <summary>
+        /// 初始化时先加载登陆弹窗
+        /// </summary>
         protected override void OnInitialize()
         {
             var vm = new LoginViewModel();
